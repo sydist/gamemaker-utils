@@ -6,7 +6,7 @@
     "path": "folders/Functions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "to",
+  "name": "chance",
   "tags": [],
   "resourceType": "GMScript",
 }

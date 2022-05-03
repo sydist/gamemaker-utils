@@ -2,10 +2,11 @@
   "resources": [
     {"id":{"name":"bgr","path":"scripts/bgr/bgr.yy",},"order":0,},
     {"id":{"name":"concat","path":"scripts/concat/concat.yy",},"order":2,},
+    {"id":{"name":"chance","path":"scripts/chance/chance.yy",},"order":5,},
     {"id":{"name":"wrap","path":"scripts/wrap/wrap.yy",},"order":3,},
     {"id":{"name":"execute","path":"scripts/execute/execute.yy",},"order":1,},
     {"id":{"name":"obj_main","path":"objects/obj_main/obj_main.yy",},"order":2,},
-    {"id":{"name":"to","path":"scripts/to/to.yy",},"order":4,},
+    {"id":{"name":"towards","path":"scripts/towards/towards.yy",},"order":4,},
     {"id":{"name":"GAME","path":"rooms/GAME/GAME.yy",},"order":1,},
   ],
   "Options": [
