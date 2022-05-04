@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"instance_create","path":"scripts/instance_create/instance_create.yy",},"order":6,},
     {"id":{"name":"bgr","path":"scripts/bgr/bgr.yy",},"order":0,},
     {"id":{"name":"concat","path":"scripts/concat/concat.yy",},"order":2,},
     {"id":{"name":"chance","path":"scripts/chance/chance.yy",},"order":5,},
