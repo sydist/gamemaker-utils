@@ -1,0 +1,2 @@
+global.keyCancel = true;
+
