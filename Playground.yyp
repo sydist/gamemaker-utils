@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"obj_controls","path":"objects/obj_controls/obj_controls.yy",},"order":4,},
+    {"id":{"name":"obj_controls","path":"objects/obj_controls/obj_controls.yy",},"order":0,},
     {"id":{"name":"instance_create","path":"scripts/instance_create/instance_create.yy",},"order":6,},
     {"id":{"name":"bgr","path":"scripts/bgr/bgr.yy",},"order":0,},
     {"id":{"name":"concat","path":"scripts/concat/concat.yy",},"order":2,},
@@ -26,7 +26,8 @@
     {"roomId":{"name":"GAME","path":"rooms/GAME/GAME.yy",},},
   ],
   "Folders": [
-    {"folderPath":"folders/Functions.yy","order":3,"resourceVersion":"1.0","name":"Functions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts.yy","order":3,"resourceVersion":"1.0","name":"Scripts","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects.yy","order":8,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
