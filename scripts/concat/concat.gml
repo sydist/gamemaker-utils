@@ -1,12 +1,11 @@
 function concat(_arr, __arr) {
-	var _length = array_length(__arr);
+	var _length = array_length(_arr);
+	var __length = array_length(__arr);
+	var ___arr = array_create(_length + __length, 0);
 	
-	var i = 0;
-	repeat(_length) {
-		_arr[array_length(_arr)] = __arr[i];
-		i++;
-	}
+	array_copy(___arr, 0, _arr, 0, _length);
+	array_copy(___arr, _length, __arr, 0, __length);
 	
-	return _arr;
+	return ___arr;
 }
 
