@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"obj_controls","path":"objects/obj_controls/obj_controls.yy",},"order":0,},
+    {"id":{"name":"select","path":"scripts/select/select.yy",},"order":7,},
     {"id":{"name":"instance_create","path":"scripts/instance_create/instance_create.yy",},"order":6,},
     {"id":{"name":"bgr","path":"scripts/bgr/bgr.yy",},"order":0,},
     {"id":{"name":"concat","path":"scripts/concat/concat.yy",},"order":2,},
@@ -9,7 +10,7 @@
     {"id":{"name":"execute","path":"scripts/execute/execute.yy",},"order":1,},
     {"id":{"name":"obj_main","path":"objects/obj_main/obj_main.yy",},"order":2,},
     {"id":{"name":"towards","path":"scripts/towards/towards.yy",},"order":4,},
-    {"id":{"name":"GAME","path":"rooms/GAME/GAME.yy",},"order":1,},
+    {"id":{"name":"GAME","path":"rooms/GAME/GAME.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Main","path":"options/main/options_main.yy",},
@@ -26,8 +27,8 @@
     {"roomId":{"name":"GAME","path":"rooms/GAME/GAME.yy",},},
   ],
   "Folders": [
-    {"folderPath":"folders/Scripts.yy","order":3,"resourceVersion":"1.0","name":"Scripts","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Objects.yy","order":8,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts.yy","order":1,"resourceVersion":"1.0","name":"Scripts","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects.yy","order":2,"resourceVersion":"1.0","name":"Objects","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
