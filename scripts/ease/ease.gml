@@ -1,28 +1,43 @@
-function ease(_val, _end, _frames, _curve) {
-	curve = _curve;
-	frames = _frames;
-	val = _val;
-	goal = _end;
-	
-	var _func = function() {
-		static channel = animcurve_get_channel(Curves, curve);
-		var _start = variable_instance_get(id, val);
-		var _distance = goal - _start;
-		
-		static timer = 0;
-		timer += 1 / frames;
-		
-		var _pos = animcurve_channel_evaluate(channel, timer);
-		variable_instance_set(id, val, _start + (_distance * _pos))
-	};
-	
-	var _endFunc = function() {
-		delete curve;
-		delete frames;
-		delete val;
-		delete goal;
-	};
+///	@func	ease(name, end_value, steps, curve_name)
+/// @
 
-	execute(_func, 0, false, _frames);
-	execute(_endFunc, 1, true);
+function ease(_name, _to, _steps, _curve) {
+	var _inst = instance_create_depth(0, 0, 0, obj_empty)
+
+	_inst.to = _to;
+	_inst.name = _name;
+	_inst.caller = other;
+	_inst.steps = _steps;
+	_inst.channel = animcurve_get_channel(Curves, _curve);
+
+	with (_inst) {
+		timeline_index = timeline_add();
+
+		var _i = 0;
+		var _func = function() {	
+			static timer = 0;
+			timer += 1 / steps;
+			
+			var _pos = animcurve_channel_evaluate(channel, timer);
+			var _val = variable_instance_get(caller, name);
+			var _distance = to - _val;
+
+			variable_instance_set(caller, name, _val + (_distance * _pos));
+		}
+
+		repeat(steps) {
+			timeline_moment_add_script(timeline_index, _i, _func);
+			_i++;
+		}
+
+		timeline_moment_add_script(timeline_index, _i, function() {
+			timeline_delete(timeline_index);
+			instance_destroy();
+		});
+
+		timeline_position = 0;
+		timeline_running = true;
+	}
+
 }
+
