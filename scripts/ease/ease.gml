@@ -1,6 +1,3 @@
-///	@func	ease(name, end_value, steps, curve_name)
-/// @
-
 function ease(_name, _to, _steps, _curve) {
 	var _inst = instance_create_depth(0, 0, 0, obj_empty)
 
