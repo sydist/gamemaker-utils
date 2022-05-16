@@ -1,3 +1,13 @@
+
+///	@func	ease(name, destination, steps, curve)
+/// @desc	Takes `name` of an instance variable and
+///			eases it to `destination` in `steps` steps
+///			using `curve`
+/// @param	name		{string}	Name of the variable to ease
+/// @param	destination	{real}		Where to ease the variable to
+/// @param	steps		{int64}		How many steps to ease the variable in
+/// @param	curve		{curve}		What curve should be used when easing
+
 function ease(_name, _to, _steps, _curve) {
 	var _inst = instance_create_depth(0, 0, 0, obj_empty)
 

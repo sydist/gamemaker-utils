@@ -1,3 +1,15 @@
+
+///@func	execute(function, delay, lastMoment?, steps, speed, loop?)
+///@desc	Uses timelines to execute `function` 
+///			after `delay` and repeats it `steps` 
+///			times, executing `speed` steps at a time.
+///@param	function		{function}		The function to execute
+///@param	delay			{int64}			The steps to wait before executing the function
+///@param	lastMoment?		{boolean}		Delete the timeline at the end
+///@param	steps			{int64}			How many steps to repeat the function for
+///@param	speed			{int64}			How many steps are executed at once
+///@param	loop			{boolean}		Wheather or not to loop the function
+
 function execute(_func, _delay = 0, _last = true, _steps = 1, _spd = 1, _loop = false) {
 	if (!timeline_exists(timeline_index)) 
 		timeline_index = timeline_add();

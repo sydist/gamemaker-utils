@@ -2,10 +2,11 @@
   "resources": [
     {"id":{"name":"obj_controls","path":"objects/obj_controls/obj_controls.yy",},"order":0,},
     {"id":{"name":"select","path":"scripts/select/select.yy",},"order":6,},
+    {"id":{"name":"keys","path":"scripts/keys/keys.yy",},"order":9,},
     {"id":{"name":"instance_create","path":"scripts/instance_create/instance_create.yy",},"order":5,},
     {"id":{"name":"bgr","path":"scripts/bgr/bgr.yy",},"order":0,},
-    {"id":{"name":"concat","path":"scripts/concat/concat.yy",},"order":2,},
     {"id":{"name":"Curves","path":"animcurves/Curves/Curves.yy",},"order":3,},
+    {"id":{"name":"values","path":"scripts/values/values.yy",},"order":10,},
     {"id":{"name":"chance","path":"scripts/chance/chance.yy",},"order":4,},
     {"id":{"name":"wrap","path":"scripts/wrap/wrap.yy",},"order":8,},
     {"id":{"name":"ease","path":"scripts/ease/ease.yy",},"order":7,},
