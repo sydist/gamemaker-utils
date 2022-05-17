@@ -8,7 +8,8 @@
 /// @param	steps		{int64}		How many steps to ease the variable in
 /// @param	curve		{curve}		What curve should be used when easing
 
-function ease(_name, _to, _steps, _curve) {
+function ease(_name, _to, _steps, _curve) 
+{
 	var _inst = instance_create_depth(0, 0, 0, obj_empty)
 
 	_inst.to = _to;
@@ -17,11 +18,12 @@ function ease(_name, _to, _steps, _curve) {
 	_inst.steps = _steps;
 	_inst.channel = animcurve_get_channel(Curves, _curve);
 
-	with (_inst) {
+	with (_inst) 
+	{
 		timeline_index = timeline_add();
 
-		var _i = 0;
-		var _func = function() {	
+		var _func = function() 
+		{	
 			static timer = 0;
 			timer += 1 / steps;
 			
@@ -32,12 +34,11 @@ function ease(_name, _to, _steps, _curve) {
 			variable_instance_set(caller, name, _val + (_distance * _pos));
 		}
 
-		repeat(steps) {
-			timeline_moment_add_script(timeline_index, _i, _func);
-			_i++;
-		}
+		var _i = 0;
+		repeat(steps) timeline_moment_add_script(timeline_index, _i++, _func);
 
-		timeline_moment_add_script(timeline_index, _i, function() {
+		timeline_moment_add_script(timeline_index, _i, function() 
+		{
 			timeline_delete(timeline_index);
 			instance_destroy();
 		});
@@ -45,6 +46,5 @@ function ease(_name, _to, _steps, _curve) {
 		timeline_position = 0;
 		timeline_running = true;
 	}
-
 }
 

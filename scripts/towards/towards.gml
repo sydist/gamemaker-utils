@@ -6,7 +6,8 @@
 /// @param	destination	{real}	The destination to move `value` to 
 /// @param	speed		{real}	The rate at which to move `value` to `destination`
 
-function towards(_from, _to, _spd) {
+function towards(_from, _to, _spd) 
+{
 	var _pos = _from + _spd
 	return (_pos >= _to) ? _to : _pos;
 }

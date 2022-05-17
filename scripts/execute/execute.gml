@@ -10,15 +10,13 @@
 ///@param	speed			{int64}			How many steps are executed at once
 ///@param	loop			{boolean}		Wheather or not to loop the function
 
-function execute(_func, _delay = 0, _last = true, _steps = 1, _spd = 1, _loop = false) {
+function execute(_func, _delay = 0, _last = true, _steps = 1, _spd = 1, _loop = false) 
+{
 	if (!timeline_exists(timeline_index)) 
 		timeline_index = timeline_add();
 
 	var _i = _delay;
-	do {
-		timeline_moment_add_script(timeline_index, _i, _func);
-		_i++;
-	}
+	do timeline_moment_add_script(timeline_index, ++_i, _func);
 	until(--_steps <= 0)
 	
 	timeline_position = 0;
@@ -26,8 +24,10 @@ function execute(_func, _delay = 0, _last = true, _steps = 1, _spd = 1, _loop = 
 	timeline_loop = _loop;
 	timeline_speed = _spd;
 	
-	if (_last) {
-		timeline_moment_add_script(timeline_index, _i, function() {
+	if (_last) 
+	{
+		timeline_moment_add_script(timeline_index, _i, function() 
+		{
 			timeline_delete(timeline_index);
 			timeline_index = -1;
 			timeline_speed = 1;
