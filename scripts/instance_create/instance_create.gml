@@ -16,9 +16,15 @@ function instance_create(_x, _y, _depth, _object, _args = pointer_null)
 	var _inst = instance_create_depth(_x, _y, _depth, obj_empty);
 	with(_inst) 
 	{
-		args = _args;
+		var _names = variable_struct_get_names(_args);
+		
+		var i = 0;
+		repeat(array_length(_names))
+		{
+			variable_instance_set(id, _names[i], _args[$ _names[i]]);
+			i++;
+		}
 		instance_change(_object, true);
-		delete args;
 	}
 	return _inst;
 }

@@ -1,1 +1,2 @@
+#macro FPS 60
 

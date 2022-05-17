@@ -1,6 +1,5 @@
 ///	@func	merge(arrays...)
-/// @desc	Merges arrays into one
-/// @param	{array}	Up to 16 arrays to merge
+/// @desc	Merges mutliple arrays into one
 
 function merge() 
 {
